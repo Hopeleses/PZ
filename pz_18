@@ -1,0 +1,67 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static public double mama(double b1, double q, int n)
+        {
+
+            if (n < 0) { Console.WriteLine(0); return 0; }
+            if (n == 0) { Console.WriteLine(0); return 0; }
+            if (n == 1) { Console.WriteLine(b1); return 0; }
+            else { b1 = b1 * q; n = n - 1; return mama(b1, q, n); }
+
+        }
+        static void Main(string[] args)
+        {
+            Console.Write("Введите номер геометрической прогрессии:");
+            int n = Convert.ToInt16(Console.ReadLine());
+            mama(9, -0,3, n);
+        }
+    }
+}
+
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static int papa(double a1, double d, double n)
+        {
+
+            if (n < 0) { Console.WriteLine(0); return 0; }
+            if (n == 0) { Console.WriteLine(0); return 0; }
+            if (n == 1) { Console.WriteLine(a1); return 0; }
+            else { a1 = a1 + d; n = n - 1; return papa(a1, d, n); }
+
+        }
+        static void Main(string[] args)
+        {
+            Console.Write("N-член последовательности: ");
+            int n = Convert.ToInt16(Console.ReadLine());
+            papa(-70, 6, n);
+        }
+    }
+}
+
+using System;
+
+namespace pz_18._3_задание
+{
+    class Program
+    {
+        static void Vozrastanie(int a, int b)
+        {
+            Console.WriteLine(a);
+            if (a == b) return;
+            Vozrastanie(b > a ? a + 1 : a - 1, b) ; 
+        }
+        static void Main(string[] args)
+        {
+            Vozrastanie(2, 66); 
+        }
+    }
+}
+
+
