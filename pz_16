@@ -1,0 +1,39 @@
+using System;
+
+namespace ConsoleApp9
+{
+    class Program
+    {
+        static void Perimetr(int a, int b, int c, int d, out int s1, out int s2)
+        {
+            s1 = 2 * (a + b);
+            s2 = 2 * (c + d);
+            if (s1 == s2)
+                Console.WriteLine($"{s1} = {s2} Периметры равны.");
+            else if (s2 > s1)
+                Console.WriteLine($"{s2} > {s1} Периметр второго треугольника больше.");
+            else
+                Console.WriteLine($"{s1} > {s2 }Периметр первого треугольника больше.");
+
+        }
+
+        static void Ploshad(int a, int b, int c, int d, out int s1, out int s2)
+        {
+            s1 = (a * b) / 2;
+            s2 = (c * d) / 2;
+            if (s1 == s2)
+                Console.WriteLine($"{s1} = {s2} Площади равны.");
+            else if (s2 > s1)
+                Console.WriteLine($"{s2} > {s1} Площадь второго треугольника больше.");
+            else
+                Console.WriteLine($"{s2} > {s1} Площадь первого треугольника больше.");
+        }
+
+        static void Main(string[] args)
+        {
+
+
+
+        }
+    }
+}
